@@ -36,17 +36,16 @@ export const App = () => {
           
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
-              Hi, I'm <span className="text-primary">Archana</span>
+              Heyy, I'm <span className="text-primary">Archana</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8">
-              First-year B.Tech CSD student passionate about web development, UI/UX design, 
-              and AI. Building projects, learning daily, and documenting my journey.
+              A student passionate about Web Development, UI/UX Design, and Software Development. I’m building projects, learning every day, and documenting my journey as I grow. Step in and take a dive into my world of code, creativity, and creation.
             </p>
             
             {/* Social Links in Hero */}
             <div className="flex justify-center lg:justify-start gap-4 mb-6">
               <a 
-                href="https://github.com/yourusername"  // PASTE YOUR GITHUB LINK HERE
+                href="https://github.com/Archana01-07"  // PASTE YOUR GITHUB LINK HERE
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
@@ -55,7 +54,7 @@ export const App = () => {
                 <Github size={20} />
               </a>
               <a 
-                href="https://linkedin.com/in/yourusername"  // PASTE YOUR LINKEDIN LINK HERE
+                href="https://www.linkedin.com/in/archana-sr-67a0b7355/"  // PASTE YOUR LINKEDIN LINK HERE
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all"
@@ -64,7 +63,7 @@ export const App = () => {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="mailto:your.email@example.com"  // PASTE YOUR EMAIL HERE
+                href="mailto:sr.archana01@gmail.com"  // PASTE YOUR EMAIL HERE
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-red-500 hover:text-white transition-all"
                 aria-label="Email"
               >
@@ -92,23 +91,26 @@ export const App = () => {
           <div className="rounded-xl border border-border p-5 hover:border-primary/50 transition-all">
             <div className="h-48 rounded-lg mb-4 overflow-hidden">
               <img 
-                src="/images/projects/project1.jpg"  // PASTE PROJECT 1 IMAGE PATH HERE
-                alt="VoiceGap - Symptom Screener"
+                src="/images/voice.png"  // PASTE PROJECT 1 IMAGE PATH HERE
+                alt="VoiceCare – Voice-Enabled AI Symptom Screener"
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="font-semibold text-xl mb-2">VoiceGap - Symptom Screener</h3>
-            <div className="flex flex-wrap gap-2 mb-3">
+            <h3 className="font-semibold text-xl mb-2">VoiceCare – Voice-Enabled AI Symptom Screener</h3>
+            {/* <div className="flex flex-wrap gap-2 mb-3">
               <span className="px-3 py-1 text-xs rounded-full bg-secondary">AI</span>
               <span className="px-3 py-1 text-xs rounded-full bg-secondary">Healthcare</span>
               <span className="px-3 py-1 text-xs rounded-full bg-secondary">Speech</span>
-            </div>
+            </div> */}
+            <p>Voice-based medical symptom screener with voice input, triage suggestions & UI screens. </p>
+             
             <a 
-              href="https://github.com/yourusername/voicegap"  // PASTE PROJECT 1 GITHUB LINK
+              href="https://github.com/Archana01-07/VoiceCare---AI-Powered-Symptom-Screener"  // PASTE PROJECT 1 GITHUB LINK
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-primary hover:underline"
             >
+              <br></br>
               View Project →
             </a>
           </div>
@@ -117,27 +119,69 @@ export const App = () => {
           <div className="rounded-xl border border-border p-5 hover:border-primary/50 transition-all">
             <div className="h-48 rounded-lg mb-4 overflow-hidden">
               <img 
-                src="/images/projects/project2.jpg"  // PASTE PROJECT 2 IMAGE PATH
-                alt="Unbias Hire"
+                src="/images/java.png"  // PASTE PROJECT 2 IMAGE PATH
+                alt="Java Learning Portal – Interactive Learning System"
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="font-semibold text-xl mb-2">Unbias Hire - AI Hiring Platform</h3>
-            <div className="flex flex-wrap gap-2 mb-3">
-              <span className="px-3 py-1 text-xs rounded-full bg-secondary">UI/UX</span>
-              <span className="px-3 py-1 text-xs rounded-full bg-secondary">Frontend</span>
-              <span className="px-3 py-1 text-xs rounded-full bg-secondary">AI</span>
-            </div>
+            <h3 className="font-semibold text-xl mb-2">Java Learning Portal – Interactive Learning System</h3>
+            <p> Desktop Java platform for learning, compiling, and tracking
+programming progress.</p>
             <a 
-              href="https://github.com/yourusername/unbiashire"  // PASTE PROJECT 2 GITHUB LINK
+              href="https://github.com/Archana01-07/Java-Learning-Portal-with-IDE"  // PASTE PROJECT 2 GITHUB LINK
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-primary hover:underline"
             >
+              <br></br>
               View Project →
             </a>
           </div>
 
+<div className="rounded-xl border border-border p-5 hover:border-primary/50 transition-all">
+            <div className="h-48 rounded-lg mb-4 overflow-hidden">
+              <img 
+                src="/images/face.png"  // PASTE PROJECT 2 IMAGE PATH
+                alt="Face Recognition – Webcam Identity Recognition
+System"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h3 className="font-semibold text-xl mb-2">Face Recognition – Webcam Identity Recognition
+System</h3>
+            <p>Real-time facial recognition system that detects faces through webcam input, classifies identities from a trained dataset, and displays facial landmarks/IDs with UI toggle controls.</p>
+            <a 
+              href="https://github.com/Archana01-07/Face-Recognition"  // PASTE PROJECT 2 GITHUB LINK
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-primary hover:underline"
+            >
+              <br></br>
+              View Project → 
+            </a>
+          </div>
+
+          <div className="rounded-xl border border-border p-5 hover:border-primary/50 transition-all">
+            <div className="h-48 rounded-lg mb-4 overflow-hidden">
+              <img 
+                src="/images/hms.png"  // PASTE PROJECT 2 IMAGE PATH
+                alt="Hospital Management System"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h3 className="font-semibold text-xl mb-2">Hospital Management System</h3>
+            <p>Web-based hospital management platform handling patient
+records, appointments, staff roles, and billing workflows.</p>
+            <a 
+              href="https://github.com/Archana01-07/Hospital-Management-System"  // PASTE PROJECT 2 GITHUB LINK
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-primary hover:underline"
+            >
+              <br></br>
+              View Project →
+            </a>
+          </div>
           {/* Add more projects as needed */}
         </div>
       </section>
@@ -147,22 +191,39 @@ export const App = () => {
         <h2 className="text-2xl sm:text-3xl font-bold mb-8">Experience</h2>
         <div className="space-y-6">
           <div className="border-l-2 border-secondary pl-6 py-2">
-            <div className="text-sm text-primary font-medium mb-1">2025 (Hackathon)</div>
-            <h4 className="font-semibold text-lg">VoiceGap - Symptom Screener (Team Member)</h4>
-            <p className="text-muted-foreground">Code Cubicle 4.0</p>
-            <p className="text-muted-foreground text-sm mt-2">
-              AI-based symptom analysis with voice input, triage suggestions & UI screens.
+            <div className="text-sm text-primary font-medium mb-1">Aug 2025 - Sep 2025 </div>
+            <h4 className="font-semibold text-lg">ValutOfCodes Internship</h4>
+            <p className="text-muted-foreground"> Gained hands-on experience in frontend development.  </p>
+            <p className="text-muted-foreground  mt-5">
+              Developed and deployed responsive web projects—including
+an internship listings page, interactive video gallery,
+recipe card, and to-do app—using HTML, CSS, and
+JavaScript.
             </p>
+            <br></br>
+            <a 
+                  href="/CERTIFICATE.pdf"  // PASTE CERTIFICATE LINK
+                  className="text-sm text-primary hover:underline mt-1 inline-block"
+                >
+                  View Certificate →
+            </a>
+            <br></br>
+            <a href="https://github.com/Archana01-07/VOC---Internship" 
+                  className="text-sm text-primary hover:underline mt-1 inline-block"
+                >
+                  <br></br>
+                  View Internship Work Summary →
+                </a>
           </div>
-          <div className="border-l-2 border-secondary pl-6 py-2">
-            <div className="text-sm text-primary font-medium mb-1">2025</div>
-            <h4 className="font-semibold text-lg">UI/UX & Frontend Learning</h4>
+          {/* <div className="border-l-2 border-secondary pl-6 py-2">
+            <div className="text-sm text-primary font-medium mb-1">2025 (Hackathon)</div>
+            <h4 className="font-semibold text-lg">VisAIon Hacks</h4>
             <p className="text-muted-foreground">Self Projects + Portfolio Work</p>
             <p className="text-muted-foreground text-sm mt-2">
               Learning Tailwind, React, and product design to build real projects.
             </p>
-          </div>
-        </div>
+          </div> */}
+        </div> 
       </section>
 
       {/* Tech Stack Section */}
@@ -173,7 +234,7 @@ export const App = () => {
           <div className="flex flex-col items-center p-4 rounded-xl border border-border hover:border-primary/50 transition-all">
             <div className="w-12 h-12 mb-2 flex items-center justify-center">
               <img 
-                src="/images/tech/java.svg"  // PASTE JAVA ICON PATH
+                src="/images/tools/java.png"  // PASTE JAVA ICON PATH
                 alt="Java"
                 className="w-8 h-8 object-contain"
               />
@@ -185,7 +246,7 @@ export const App = () => {
           <div className="flex flex-col items-center p-4 rounded-xl border border-border hover:border-primary/50 transition-all">
             <div className="w-12 h-12 mb-2 flex items-center justify-center">
               <img 
-                src="/images/tech/python.svg"  // PASTE PYTHON ICON PATH
+                src="/images/tools/python.png"  // PASTE PYTHON ICON PATH
                 alt="Python"
                 className="w-8 h-8 object-contain"
               />
@@ -197,19 +258,19 @@ export const App = () => {
           <div className="flex flex-col items-center p-4 rounded-xl border border-border hover:border-primary/50 transition-all">
             <div className="w-12 h-12 mb-2 flex items-center justify-center">
               <img 
-                src="/images/tech/react.svg"  // PASTE REACT ICON PATH
-                alt="React"
+                src="/images/tools/c.png"  // PASTE REACT ICON PATH
+                alt="C"
                 className="w-8 h-8 object-contain"
               />
             </div>
-            <span className="text-sm font-medium">React</span>
+            <span className="text-sm font-medium">C</span>
           </div>
 
           {/* Tech Item 4 */}
           <div className="flex flex-col items-center p-4 rounded-xl border border-border hover:border-primary/50 transition-all">
             <div className="w-12 h-12 mb-2 flex items-center justify-center">
               <img 
-                src="/images/tech/javascript.svg"  // PASTE JS ICON PATH
+                src="/images/tools/javascript.svg"  // PASTE JS ICON PATH
                 alt="JavaScript"
                 className="w-8 h-8 object-contain"
               />
@@ -221,7 +282,7 @@ export const App = () => {
           <div className="flex flex-col items-center p-4 rounded-xl border border-border hover:border-primary/50 transition-all">
             <div className="w-12 h-12 mb-2 flex items-center justify-center">
               <img 
-                src="/images/tech/html.svg"  // PASTE HTML ICON PATH
+                src="/images/tools/html.jpg"  // PASTE HTML ICON PATH
                 alt="HTML"
                 className="w-8 h-8 object-contain"
               />
@@ -233,17 +294,156 @@ export const App = () => {
           <div className="flex flex-col items-center p-4 rounded-xl border border-border hover:border-primary/50 transition-all">
             <div className="w-12 h-12 mb-2 flex items-center justify-center">
               <img 
-                src="/images/tech/css.svg"  // PASTE CSS ICON PATH
+                src="/images/tools/css3.svg"  // PASTE CSS ICON PATH
                 alt="CSS"
                 className="w-8 h-8 object-contain"
               />
             </div>
             <span className="text-sm font-medium">CSS</span>
           </div>
+          {/* Tech Item 7 */}
+          <div className="flex flex-col items-center p-4 rounded-xl border border-border hover:border-primary/50 transition-all">
+            <div className="w-12 h-12 mb-2 flex items-center justify-center">
+              <img 
+                src="/images/tools/mysql.png"  // PASTE CSS ICON PATH
+                alt="MySQL"
+                className="w-8 h-8 object-contain"
+              />
+            </div>
+            <span className="text-sm font-medium">MySQL</span>
+          </div>
+          {/* Tech Item 8 */}
+          <div className="flex flex-col items-center p-4 rounded-xl border border-border hover:border-primary/50 transition-all">
+            <div className="w-12 h-12 mb-2 flex items-center justify-center">
+              <img 
+                src="/images/tools/vsc.png"  // PASTE CSS ICON PATH
+                alt="VSC"
+                className="w-8 h-8 object-contain"
+              />
+            </div>
+            <span className="text-sm font-medium">Visual Studio Code</span>
+          </div>
+
+          {/* Tech Item 9*/}
+          <div className="flex flex-col items-center p-4 rounded-xl border border-border hover:border-primary/50 transition-all">
+            <div className="w-12 h-12 mb-2 flex items-center justify-center">
+              <img 
+                src="/images/tools/git.png"  // PASTE CSS ICON PATH
+                alt="Git/Github"
+                className="w-8 h-8 object-contain"
+              />
+            </div>
+            <span className="text-sm font-medium">Git/Github</span>
+          </div>
+
+          {/* Tech Item 10*/}
+          <div className="flex flex-col items-center p-4 rounded-xl border border-border hover:border-primary/50 transition-all">
+            <div className="w-12 h-12 mb-2 flex items-center justify-center">
+              <img 
+                src="/images/tools/figma.svg"  // PASTE CSS ICON PATH
+                alt="Figma"
+                className="w-8 h-8 object-contain"
+              />
+            </div>
+            <span className="text-sm font-medium">Figma</span>
+          </div>
+
+           
+          {/* Tech Item 11*/}
+          <div className="flex flex-col items-center p-4 rounded-xl border border-border hover:border-primary/50 transition-all">
+            <div className="w-12 h-12 mb-2 flex items-center justify-center">
+              <img 
+                src="/images/tools/canva.png"  // PASTE CSS ICON PATH
+                alt="Canva"
+                className="w-8 h-8 object-contain"
+              />
+            </div>
+            <span className="text-sm font-medium">Canva</span>
+          </div>
 
           {/* Add more tech items as needed */}
         </div>
       </section>
+
+      {/* Coding Profiles Section */}
+<section id="coding" className="mb-16">
+  <h2 className="text-2xl sm:text-3xl font-bold mb-8">Coding Profiles</h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    {/* LeetCode */}
+    <a 
+      href="https://leetcode.com/u/Archana_official/"  // REPLACE WITH YOUR LEETCODE PROFILE
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-6 rounded-xl border border-border hover:border-orange-500 hover:shadow-lg transition-all duration-300 group"
+    >
+      <div className="flex items-center gap-4 mb-4">
+        <div className="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center">
+          <div className="text-2xl font-bold text-orange-500">LC</div>
+        </div>
+        <h3 className="text-xl font-semibold group-hover:text-orange-500">LeetCode</h3>
+      </div>
+      
+      <div className="flex items-center text-sm text-orange-500 font-medium">
+        View Profile →
+      </div>
+    </a>
+
+    {/* CodeChef */}
+    <a 
+      href="https://www.codechef.com/users/yoke_glint_87"  // REPLACE WITH YOUR CODECHEF PROFILE
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-6 rounded-xl border border-border hover:border-red-500 hover:shadow-lg transition-all duration-300 group"
+    >
+      <div className="flex items-center gap-4 mb-4">
+        <div className="w-12 h-12 rounded-lg bg-red-500/10 flex items-center justify-center">
+          <div className="text-2xl font-bold text-red-500">CC</div>
+        </div>
+        <h3 className="text-xl font-semibold group-hover:text-red-500">CodeChef</h3>
+      </div>
+      <div className="flex items-center text-sm text-red-500 font-medium">
+        View Profile →
+      </div>
+    </a>
+
+    {/* HackerRank */}
+    <a 
+      href="https://www.hackerrank.com/profile/sr_archana01"  // REPLACE WITH YOUR HACKERRANK PROFILE
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-6 rounded-xl border border-border hover:border-green-500 hover:shadow-lg transition-all duration-300 group"
+    >
+      <div className="flex items-center gap-4 mb-4">
+        <div className="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center">
+          <div className="text-2xl font-bold text-green-500">HR</div>
+        </div>
+        <h3 className="text-xl font-semibold group-hover:text-green-500">HackerRank</h3>
+      </div>
+      
+      <div className="flex items-center text-sm text-green-500 font-medium">
+        View Profile →
+      </div>
+      
+    </a>
+    {/* CodeChef */}
+    <a 
+      href="https://www.geeksforgeeks.org/profile/srarchiq69"  // REPLACE WITH YOUR CODECHEF PROFILE
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-6 rounded-xl border border-border hover:border-red-500 hover:shadow-lg transition-all duration-300 group"
+    >
+      <div className="flex items-center gap-4 mb-4">
+        <div className="w-12 h-12 rounded-lg bg-red-500/10 flex items-center justify-center">
+          <div className="text-2xl font-bold text-red-500">CC</div>
+        </div>
+        <h3 className="text-xl font-semibold group-hover:text-red-500">Geeksforeeks</h3>
+      </div>
+      <div className="flex items-center text-sm text-red-500 font-medium">
+        View Profile →
+      </div>
+    </a>
+  </div>
+</section>
 
       {/* Achievements & Certifications Section */}
       <section id="achievements" className="mb-16">
@@ -255,9 +455,57 @@ export const App = () => {
                 2025
               </div>
               <div className="flex-1">
-                <h4 className="font-medium text-lg">Participated in Code Cubicle 4.0 Hackathon</h4>
+                <h4 className="font-medium text-lg">Runner Up in VisAIon Hacks 2025 </h4>
+                <h3> Conducted by Ciklum & EEC</h3>
+                <br></br>
+                <p> FaceBank – Developed and deployed with Lovable AI, this smart banking system uses webcam facial recognition to identify customers, predict needs, and auto-route them to service counters (VIP/Elderly/Regular). </p>
+<br></br>
+                <p>Received a cash prize of 5000 rupees </p>
+                <br></br>
                 <a 
-                  href="#"  // PASTE CERTIFICATE LINK
+                  href="https://github.com/Archana01-07/face-bank"  // PASTE CERTIFICATE LINK
+                  className="text-sm text-primary hover:underline mt-1 inline-block"
+                >
+                  View Project →
+                </a>
+                <br></br>
+                <br></br>
+
+                <a 
+                  href="/vis.jpeg"  // PASTE CERTIFICATE LINK
+                  className="text-sm text-primary hover:underline mt-1 inline-block"
+                >
+                  View Certificate →
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="p-5 rounded-xl bg-card border border-border">
+            <div className="flex items-start gap-4">
+              <div className="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary font-medium">
+                2025
+              </div>
+              <div className="flex-1">
+                <h4 className="font-medium text-lg">Privacy and Security in Online Social Media </h4>
+                <p>NPTEL Online Certification</p>
+                <a 
+                  href="/Nptel.pdf"  // PASTE CERTIFICATE LINK
+                  className="text-sm text-primary hover:underline mt-1 inline-block"
+                >
+                  View Certificate →
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="p-5 rounded-xl bg-card border border-border">
+            <div className="flex items-start gap-4">
+              <div className="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary font-medium">
+                2025
+              </div>
+              <div className="flex-1">
+                <h4 className="font-medium text-lg">MongoDB Basics for Students </h4>
+                <a 
+                  href="/mongo.pdf"  // PASTE CERTIFICATE LINK
                   className="text-sm text-primary hover:underline mt-1 inline-block"
                 >
                   View Certificate →
@@ -269,12 +517,33 @@ export const App = () => {
           <div className="p-5 rounded-xl bg-card border border-border">
             <div className="flex items-start gap-4">
               <div className="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary font-medium">
-                2024
+                2025
               </div>
               <div className="flex-1">
-                <h4 className="font-medium text-lg">UI/UX Fundamentals - Self Learning Path</h4>
+                <h4 className="font-medium text-lg">Introduction to Cybersecurity </h4>
+                <p>Cisco Networkig Academy</p>
                 <a 
-                  href="#"  // PASTE CERTIFICATE LINK
+                  href="/mongo.pdf"  // PASTE CERTIFICATE LINK
+                  className="text-sm text-primary hover:underline mt-1 inline-block"
+                >
+                  View Certificate →
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <div className="p-5 rounded-xl bg-card border border-border">
+            <div className="flex items-start gap-4">
+              <div className="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary font-medium">
+                2025
+              </div>
+              <div className="flex-1">
+                <h4 className="font-medium text-lg"> Networking Basics </h4>
+                <p>Cisco Networkig Academy</p>
+
+                <a 
+                  href="/network.pdf"  // PASTE CERTIFICATE LINK
                   className="text-sm text-primary hover:underline mt-1 inline-block"
                 >
                   View Certificate →

@@ -1,182 +1,125 @@
 /**
- *  @copyright 2025 Archana
- *  @license Apache-2.0
+ * @copyright 2025 Archana
+ * @license Apache-2.0
  */
 
-/** 
- * Node modules
-*/
 import { useState } from "react";
-
-/** 
- * Components
-*/
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-
-/** 
- * Assets
-*/
-import { MenuIcon } from "lucide-react";
-
-/** 
- * Data
-*/
-import { navLinks, socialLinks } from "@/constants/index";
+import { 
+  Menu, 
+  X, 
+  Home, 
+  Briefcase, 
+  FileText,
+  Cpu,
+  Award,
+  Mail
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export const Sidebar = () => {
-    const [active, setActive] = useState('#hero');
+  const [active, setActive] = useState('#hero');
+  const [isOpen, setIsOpen] = useState(false);
 
-    const handleDownloadResume = () => {
-        const link = document.createElement('a');
-        link.href = '/resume.pdf';
-        link.download = 'Archana_Srinivasan_Resume.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Archana_Srinivasan_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
-    return (
-        <>
-            <Sheet> 
-                <SheetTrigger asChild>
-                    <Button 
-                        variant='ghost' 
-                        size='icon' 
-                        className='m-4 fixed top-4 right-4 z-50 border-2 hover:border-primary bg-background/80 backdrop-blur-sm py-5 px-5 rounded-full hover:text-primary cursor-pointer lg:hidden'
-                    >
-                        <MenuIcon size={30}/>
-                    </Button>
-                </SheetTrigger>
-                <SheetContent 
-                    side='right' 
-                    className='w-84 bg-background text-foreground py-6 pl-10 sm:w-96'
-                >
-                    <SheetTitle className="text-lg sm:text-xl font-semibold">Menu</SheetTitle>
-                    
-                    <nav className="flex flex-col gap-3 sm:gap-4 mt-6">
-                        {navLinks.map((link) => {
-                            const Icon = link.icon;
-                            return (
-                                <a 
-                                    href={link.link} 
-                                    key={link.label}
-                                    onClick={() => setActive(link.link)}
-                                    className={cn(
-                                        'text-muted-foreground flex items-center gap-3 hover:text-primary transition-colors duration-200 text-base sm:text-lg py-2',
-                                        active === link.link && 'text-primary font-medium'
-                                    )}
-                                >
-                                    <Icon className='size-5 sm:size-6'/>
-                                    {link.label}
-                                </a>
-                            );
-                        })}
-                    </nav>
-                    
-                    <div className="mt-12 sm:mt-16">
-                        <p className="pb-3 sm:pb-4 text-foreground font-medium">Connect with me</p>
-                        <div className="flex gap-3 sm:gap-4">
-                            {socialLinks.map((social, i) => {
-                                const Icon = social.icon;
-                                return (
-                                    <a 
-                                        key={i}
-                                        href={social.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="hover:text-primary border-2 border-border p-2 sm:p-3 rounded-full hover:border-primary transition duration-200 text-muted-foreground hover:bg-accent"
-                                    >
-                                        <Icon className='size-4 sm:size-5' />
-                                    </a>
-                                );
-                            })}
-                        </div>
-                        
-                        <Button 
-                            className="w-full mt-6 sm:mt-8" 
-                            size="sm"
-                            onClick={handleDownloadResume}
-                        >
-                            Download Resume
-                        </Button>
-                    </div>
-                </SheetContent>
-            </Sheet>
+  // ONLY required navigation options
+  const navOptions = [
+    { label: 'Home', link: '#hero', icon: Home },
+    { label: 'Projects', link: '#projects', icon: Briefcase },
+    { label: 'Experience', link: '#experience', icon: FileText },
+    { label: 'Tech Stack', link: '#techstack', icon: Cpu },
+    { label: 'Achievements', link: '#achievements', icon: Award },
+    { label: 'Contact', link: '#contact', icon: Mail },
+  ];
 
-            {/* Desktop Sidebar */}
-            <aside className="hidden lg:block fixed left-0 top-0 h-screen w-64 border-r border-border bg-background/50 backdrop-blur-sm p-6">
-                <div className="flex flex-col h-full">
-                    {/* Profile Image for Desktop */}
-                    <div className="mb-8">
-                        <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary/30 mb-4 mx-auto">
-                            <img 
-                                src="/archana.jpg"
-                                alt="Profile"
-                                className="w-full h-full object-cover"
-                                onError={(e) => {
-                                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1494790108755-2616b786d4d9?w=200&h=200&fit=crop";
-                                }}
-                            />
-                        </div>
-                        <h1 className="text-center text-lg font-bold">Archana Srinivasan</h1>
-                        <p className="text-center text-sm text-muted-foreground">CSD Student & Developer</p>
-                    </div>
+  return (
+    <>
+      {/* Menu Button */}
+      <Sheet open={isOpen} onOpenChange={setIsOpen}>
+        <SheetTrigger asChild>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="fixed top-6 right-6 z-50 bg-background/80 backdrop-blur-sm border border-border rounded-full w-12 h-12 hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-lg"
+            aria-label="Open menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </Button>
+        </SheetTrigger>
 
-                    {/* Desktop Navigation */}
-                    <nav className="flex-1">
-                        <ul className="space-y-2">
-                            {navLinks.map((link) => {
-                                const Icon = link.icon;
-                                return (
-                                    <li key={link.label}>
-                                        <a
-                                            href={link.link}
-                                            onClick={() => setActive(link.link)}
-                                            className={cn(
-                                                "flex items-center gap-3 px-3 py-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-colors",
-                                                active === link.link && "text-primary bg-accent"
-                                            )}
-                                        >
-                                            <Icon size={18} />
-                                            <span className="text-sm font-medium">{link.label}</span>
-                                        </a>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </nav>
-
-                    {/* Desktop Social & Download */}
-                    <div className="pt-6 border-t border-border">
-                        <div className="flex justify-center gap-3 mb-6">
-                            {socialLinks.map((social) => {
-                                const Icon = social.icon;
-                                return (
-                                    <a
-                                        key={social.label}
-                                        href={social.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="w-9 h-9 rounded-full bg-accent flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors text-muted-foreground"
-                                        aria-label={social.label}
-                                    >
-                                        <Icon size={16} />
-                                    </a>
-                                );
-                            })}
-                        </div>
-                        <Button 
-                            className="w-full" 
-                            size="sm"
-                            onClick={handleDownloadResume}
-                        >
-                            Download Resume
-                        </Button>
-                    </div>
+        {/* Sidebar Content */}
+        <SheetContent 
+          side="right" 
+          className="w-full sm:w-80 p-0 border-l border-border bg-background/95 backdrop-blur-xl"
+        >
+          <div className="h-full flex flex-col p-6">
+            {/* Profile Header */}
+            <div className="flex flex-col items-center mb-8 pb-8 border-b border-border">
+              <div className="relative mb-4">
+                <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-primary/30">
+                  <img 
+                    src="/archana.jpeg"
+                    alt="Archana Srinivasan"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-            </aside>
-        </>
-    );
+              </div>
+              
+              <h1 className="text-xl font-bold text-center mb-1">Archana Srinivasan</h1>
+              <p className="text-sm text-muted-foreground text-center mb-4">
+                CSD Student & Developer
+              </p>
+              
+              {/* Download Resume Button */}
+              <Button 
+                className="w-full rounded-full mb-2"
+                onClick={handleDownloadResume}
+                size="sm"
+              >
+                Download Resume
+              </Button>
+            </div>
+
+            {/* Main Navigation */}
+            <nav className="flex-1">
+              <ul className="space-y-1">
+                {navOptions.map((link) => {
+                  const Icon = link.icon;
+                  return (
+                    <li key={link.label}>
+                      <a
+                        href={link.link}
+                        onClick={() => {
+                          setActive(link.link);
+                          setIsOpen(false);
+                        }}
+                        className={cn(
+                          "flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-300",
+                          active === link.link 
+                            ? "bg-primary/20 text-primary border border-primary/30" 
+                            : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                        )}
+                      >
+                        <Icon size={18} />
+                        <span className="font-medium">{link.label}</span>
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+          </div>
+        </SheetContent>
+      </Sheet>
+    </>
+  );
 };

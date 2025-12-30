@@ -444,7 +444,7 @@ JavaScript.
                 <h4 className="font-medium text-lg">Introduction to Cybersecurity </h4>
                 <p>Cisco Networkig Academy</p>
                 <a 
-                  href="/mongo.pdf"  // PASTE CERTIFICATE LINK
+                  href="/cyber.pdf"  // PASTE CERTIFICATE LINK
                   className="text-sm text-primary hover:underline mt-1 inline-block"
                 >
                   View Certificate →
